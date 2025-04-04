@@ -1,0 +1,74 @@
+services:
+  postgres:
+    image: postgres:14-alpine
+    container_name: dysaeats-postgres
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+      PG_DATA: /var/lib/postgresql/data
+    command: ["postgres", "-c", "log_statement=all"]
+
+  redis:
+    image: redis:6-alpine
+    container_name: dysaeats-redis
+    restart: always
+    ports:
+      - 6379:6379
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+
+  backend:
+    build:
+      context: ./backend
+      target: ${NODE_ENV:-development}
+    container_name: dysaeats-backend
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_DATABASE=${DB_DATABASE}
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRATION=${JWT_EXPIRATION}
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  dashboard-web:
+    build:
+      context: ./dashboard-web
+      dockerfile: Dockerfile
+    container_name: dysaeats-dashboard-web
+    restart: always
+    ports:
+      - 3001:3000
+    depends_on:
+      - backend
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+      - NEXT_PUBLIC_API_URL=http://localhost:3000/api
+      - NEXT_PUBLIC_WS_URL=ws://localhost:3000
+    volumes:
+      - ./dashboard-web:/app
+      - /app/node_modules
+
+volumes:
+  postgres_data:
+  redis_data:

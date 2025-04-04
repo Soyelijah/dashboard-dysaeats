@@ -1,0 +1,83 @@
+{
+  "common": {
+    "success": "Success",
+    "error": "Error",
+    "notFound": "Not found",
+    "unauthorized": "Unauthorized",
+    "forbidden": "Forbidden",
+    "badRequest": "Bad request",
+    "serverError": "Server error",
+    "created": "Created successfully",
+    "updated": "Updated successfully",
+    "deleted": "Deleted successfully"
+  },
+  "auth": {
+    "registered": "User registered successfully",
+    "loggedIn": "Logged in successfully",
+    "loggedOut": "Logged out successfully",
+    "invalidCredentials": "Invalid credentials",
+    "emailAlreadyExists": "Email already exists",
+    "passwordReset": {
+      "emailSent": "Password reset email sent",
+      "success": "Password reset successfully",
+      "tokenInvalid": "Password reset token is invalid or has expired"
+    },
+    "userNotFound": "User not found",
+    "sessionExpired": "Session expired, please login again"
+  },
+  "orders": {
+    "created": "Order created successfully",
+    "updated": "Order updated successfully",
+    "cancelled": "Order cancelled successfully",
+    "notFound": "Order not found",
+    "already": {
+      "cancelled": "Order already cancelled",
+      "delivered": "Order already delivered",
+      "inProgress": "Order already in progress"
+    },
+    "status": {
+      "updated": "Order status updated successfully"
+    }
+  },
+  "restaurants": {
+    "created": "Restaurant created successfully",
+    "updated": "Restaurant updated successfully",
+    "deleted": "Restaurant deleted successfully",
+    "notFound": "Restaurant not found"
+  },
+  "menu": {
+    "itemCreated": "Menu item created successfully",
+    "itemUpdated": "Menu item updated successfully",
+    "itemDeleted": "Menu item deleted successfully",
+    "itemNotFound": "Menu item not found",
+    "categoryCreated": "Category created successfully",
+    "categoryUpdated": "Category updated successfully",
+    "categoryDeleted": "Category deleted successfully",
+    "categoryNotFound": "Category not found"
+  },
+  "deliveries": {
+    "assigned": "Delivery assigned successfully",
+    "statusUpdated": "Delivery status updated successfully",
+    "notFound": "Delivery not found"
+  },
+  "payments": {
+    "processed": "Payment processed successfully",
+    "failed": "Payment processing failed",
+    "refunded": "Payment refunded successfully"
+  },
+  "users": {
+    "created": "User created successfully",
+    "updated": "User updated successfully",
+    "deleted": "User deleted successfully",
+    "notFound": "User not found"
+  },
+  "notifications": {
+    "sent": "Notification sent successfully",
+    "updated": "Notification updated successfully",
+    "deleted": "Notification deleted successfully",
+    "notFound": "Notification not found",
+    "preferences": {
+      "updated": "Notification preferences updated successfully"
+    }
+  }
+}

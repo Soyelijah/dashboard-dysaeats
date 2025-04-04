@@ -1,0 +1,23 @@
+{
+  "required": "{field} is required",
+  "string": "{field} must be a string",
+  "number": "{field} must be a number",
+  "boolean": "{field} must be a boolean",
+  "date": "{field} must be a valid date",
+  "email": "{field} must be a valid email address",
+  "min": {
+    "string": "{field} must be at least {min} characters",
+    "number": "{field} must be greater than or equal to {min}",
+    "array": "{field} must contain at least {min} elements"
+  },
+  "max": {
+    "string": "{field} must be at most {max} characters",
+    "number": "{field} must be less than or equal to {max}",
+    "array": "{field} must contain at most {max} elements"
+  },
+  "enum": "{field} must be one of the following values: {values}",
+  "unique": "{field} must be unique",
+  "rutInvalid": "Invalid RUT format",
+  "passwordsMustMatch": "Passwords must match",
+  "passwordComplexity": "Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character"
+}

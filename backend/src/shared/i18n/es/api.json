@@ -1,0 +1,83 @@
+{
+  "common": {
+    "success": "Éxito",
+    "error": "Error",
+    "notFound": "No encontrado",
+    "unauthorized": "No autorizado",
+    "forbidden": "Prohibido",
+    "badRequest": "Solicitud incorrecta",
+    "serverError": "Error del servidor",
+    "created": "Creado con éxito",
+    "updated": "Actualizado con éxito",
+    "deleted": "Eliminado con éxito"
+  },
+  "auth": {
+    "registered": "Usuario registrado con éxito",
+    "loggedIn": "Sesión iniciada con éxito",
+    "loggedOut": "Sesión cerrada con éxito",
+    "invalidCredentials": "Credenciales inválidas",
+    "emailAlreadyExists": "El correo electrónico ya existe",
+    "passwordReset": {
+      "emailSent": "Correo de restablecimiento de contraseña enviado",
+      "success": "Contraseña restablecida con éxito",
+      "tokenInvalid": "El token de restablecimiento de contraseña es inválido o ha expirado"
+    },
+    "userNotFound": "Usuario no encontrado",
+    "sessionExpired": "Sesión expirada, por favor inicie sesión nuevamente"
+  },
+  "orders": {
+    "created": "Pedido creado con éxito",
+    "updated": "Pedido actualizado con éxito",
+    "cancelled": "Pedido cancelado con éxito",
+    "notFound": "Pedido no encontrado",
+    "already": {
+      "cancelled": "El pedido ya está cancelado",
+      "delivered": "El pedido ya está entregado",
+      "inProgress": "El pedido ya está en progreso"
+    },
+    "status": {
+      "updated": "Estado del pedido actualizado con éxito"
+    }
+  },
+  "restaurants": {
+    "created": "Restaurante creado con éxito",
+    "updated": "Restaurante actualizado con éxito",
+    "deleted": "Restaurante eliminado con éxito",
+    "notFound": "Restaurante no encontrado"
+  },
+  "menu": {
+    "itemCreated": "Ítem del menú creado con éxito",
+    "itemUpdated": "Ítem del menú actualizado con éxito",
+    "itemDeleted": "Ítem del menú eliminado con éxito",
+    "itemNotFound": "Ítem del menú no encontrado",
+    "categoryCreated": "Categoría creada con éxito",
+    "categoryUpdated": "Categoría actualizada con éxito",
+    "categoryDeleted": "Categoría eliminada con éxito",
+    "categoryNotFound": "Categoría no encontrada"
+  },
+  "deliveries": {
+    "assigned": "Entrega asignada con éxito",
+    "statusUpdated": "Estado de entrega actualizado con éxito",
+    "notFound": "Entrega no encontrada"
+  },
+  "payments": {
+    "processed": "Pago procesado con éxito",
+    "failed": "Procesamiento de pago fallido",
+    "refunded": "Pago reembolsado con éxito"
+  },
+  "users": {
+    "created": "Usuario creado con éxito",
+    "updated": "Usuario actualizado con éxito",
+    "deleted": "Usuario eliminado con éxito",
+    "notFound": "Usuario no encontrado"
+  },
+  "notifications": {
+    "sent": "Notificación enviada con éxito",
+    "updated": "Notificación actualizada con éxito",
+    "deleted": "Notificación eliminada con éxito",
+    "notFound": "Notificación no encontrada",
+    "preferences": {
+      "updated": "Preferencias de notificación actualizadas con éxito"
+    }
+  }
+}
