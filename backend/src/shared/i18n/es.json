@@ -1,0 +1,10 @@
+{
+  "api": {
+    "auth": {
+      "registered": "Usuario registrado correctamente",
+      "loggedIn": "Sesión iniciada correctamente",
+      "loggedOut": "Sesión cerrada correctamente",
+      "tokenRefreshed": "Token refrescado correctamente"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+# Archivos y directorios que no necesitamos en la imagen Docker
+
+# Directorios de dependencias
+node_modules
+dist
+
+# Archivos de git
+.git
+.gitignore
+
+# Archivos de configuración de desarrollo
+.env
+.env.*
+!.env.example
+
+# Archivos de logs
+logs
+*.log
+npm-debug.log*
+
+# Archivos de IDE/editores
+.idea
+.vscode
+*.swp
+*.swo
+
+# Directorios de sistema
+.DS_Store
+
+# Archivos de pruebas
+coverage
+.nyc_output
+
+# Archivos temporales
+tmp
+temp
+
+# Otros
+README.md
+LICENSE
+.github
+docs
