@@ -8,8 +8,11 @@ import { EventEmitterModule } from '@nestjs/event-emitter';
 import { APP_FILTER, APP_GUARD } from '@nestjs/core';
 import { I18nModule } from 'nestjs-i18n';
 import { join } from 'path';
+<<<<<<< HEAD
 import { InitDataService } from './init-data.service';
 // Removemos el HealthController ya que ahora usamos la ruta directamente en Express
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 
 // Configuración i18n
 import { i18nConfig } from './config/i18n.config';
@@ -26,9 +29,12 @@ import { DeliveriesModule } from './modules/deliveries/deliveries.module';
 import { NotificationsModule } from './modules/notifications/notifications.module';
 import { AnalyticsModule } from './modules/analytics/analytics.module';
 import { WebsocketsModule } from './websockets/websockets.module';
+<<<<<<< HEAD
 import { AdminSimpleModule } from './modules/admin-simple/admin-simple.module';
 import { AdminDashboardModule } from './modules/admin-dashboard/admin-dashboard.module';
 import { EventSourcingModule } from './modules/event-sourcing/event-sourcing.module';
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 
 // Guardias y filtros globales
 import { JwtAuthGuard } from './shared/guards/jwt-auth.guard';
@@ -39,10 +45,13 @@ import configuration from './config/configuration';
 
 @Module({
   imports: [
+<<<<<<< HEAD
     // Importar User para InitDataService
     TypeOrmModule.forFeature([
       require('./modules/auth/entities/user.entity').User,
     ]),
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     // Configuración global
     ConfigModule.forRoot({
       isGlobal: true,
@@ -61,7 +70,11 @@ import configuration from './config/configuration';
         password: configService.get('database.password'),
         database: configService.get('database.database'),
         entities: [join(__dirname, '**', '*.entity.{ts,js}')],
+<<<<<<< HEAD
         synchronize: false, // Desactivado para evitar problemas con tablas existentes
+=======
+        synchronize: false, // Las tablas ya existen
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
         logging: configService.get('nodeEnv') !== 'production',
       }),
     }),
@@ -85,14 +98,20 @@ import configuration from './config/configuration';
     // Event Emitter para eventos
     EventEmitterModule.forRoot(),
     
+<<<<<<< HEAD
     // Módulo i18n para internacionalización (desactivado temporalmente)
     // I18nModule.forRoot(i18nConfig),
+=======
+    // Módulo i18n para internacionalización
+    I18nModule.forRoot(i18nConfig),
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     
     // Módulo compartido
     SharedModule,
     
     // Módulos de la aplicación
     AuthModule,
+<<<<<<< HEAD
     // Deshabilitamos temporalmente módulos problemáticos
     RestaurantsModule,
     OrdersModule,
@@ -105,6 +124,15 @@ import configuration from './config/configuration';
     AdminDashboardModule,
     // Módulo de Event Sourcing
     EventSourcingModule,
+=======
+    RestaurantsModule,
+    OrdersModule,
+    PaymentsModule,
+    DeliveriesModule,
+    NotificationsModule,
+    AnalyticsModule,
+    WebsocketsModule,
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   ],
   controllers: [],
   providers: [
@@ -118,8 +146,11 @@ import configuration from './config/configuration';
       provide: APP_FILTER,
       useClass: AllExceptionsFilter,
     },
+<<<<<<< HEAD
     // Servicio de inicialización de datos
     InitDataService,
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   ],
 })
 export class AppModule {}

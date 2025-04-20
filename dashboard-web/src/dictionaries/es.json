@@ -20,12 +20,16 @@
     "retry": "Reintentar",
     "requiredField": "Campo requerido",
     "invalidFormat": "Formato inválido",
+<<<<<<< HEAD
     "somethingWentWrong": "Algo salió mal",
     "allRightsReserved": "Todos los derechos reservados",
     "redirecting": "Redireccionando...",
     "actions": "Acciones",
     "recentActivity": "Actividad Reciente",
     "loginRequired": "Debes iniciar sesión para ver el dashboard"
+=======
+    "somethingWentWrong": "Algo salió mal"
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   },
   "auth": {
     "login": "Iniciar sesión",
@@ -54,6 +58,7 @@
     "passwordResetSent": "Instrucciones enviadas a tu correo",
     "createAccount": "Crear cuenta",
     "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+<<<<<<< HEAD
     "dontHaveAccount": "¿No tienes una cuenta?",
     "welcomeBack": "¡Bienvenido de nuevo!",
     "loginDescription": "Inicia sesión en tu cuenta para acceder a todas las funcionalidades de DysaEats.",
@@ -79,6 +84,9 @@
     "acceptTerms": "Acepto los",
     "termsAndConditions": "términos y condiciones",
     "acceptTermsRequired": "Debes aceptar los términos y condiciones"
+=======
+    "dontHaveAccount": "¿No tienes una cuenta?"
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   },
   "orders": {
     "title": "Pedidos",

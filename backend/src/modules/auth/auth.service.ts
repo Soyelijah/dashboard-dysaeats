@@ -63,6 +63,7 @@ export class AuthService {
       role: user.role 
     };
     
+<<<<<<< HEAD
     // Generar access token (corta duración)
     const accessToken = this.jwtService.sign(payload, {
       secret: this.configService.get('JWT_SECRET'),
@@ -86,6 +87,12 @@ export class AuthService {
       accessToken,
       refreshToken,
       expiresIn: 900, // 15 minutos en segundos
+=======
+    const accessToken = this.jwtService.sign(payload);
+    
+    return {
+      accessToken,
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
       user: {
         id: user.id,
         email: user.email,
@@ -128,6 +135,7 @@ export class AuthService {
       throw new UnauthorizedException('Token inválido');
     }
   }
+<<<<<<< HEAD
   
   async refreshToken(refreshToken: string): Promise<LoginResponseDto> {
     try {
@@ -185,4 +193,6 @@ export class AuthService {
       throw new UnauthorizedException('Error al refrescar token: ' + error.message);
     }
   }
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 }

@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
+<<<<<<< HEAD
     remotePatterns: [
       {
         protocol: 'http',
@@ -30,3 +31,10 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+=======
+    domains: ['localhost'],
+  },
+};
+
+module.exports = nextConfig;
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f

@@ -10,7 +10,10 @@ import { Payment } from '../entities/payment.entity';
 import { CreatePaymentDto } from '../dto/create-payment.dto';
 import { User } from '../../auth/entities/user.entity';
 import { Restaurant } from '../../restaurants/entities/restaurant.entity';
+<<<<<<< HEAD
 import { PaymentRepository } from '../repositories/payment.repository';
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 
 @Injectable()
 export class MercadoPagoService {
@@ -21,7 +24,12 @@ export class MercadoPagoService {
 
   constructor(
     private configService: ConfigService,
+<<<<<<< HEAD
     private paymentRepository: PaymentRepository,
+=======
+    @InjectRepository(Payment)
+    private paymentRepository: Repository<Payment>,
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     @InjectRepository(Order)
     private orderRepository: Repository<Order>,
     @InjectRepository(User)

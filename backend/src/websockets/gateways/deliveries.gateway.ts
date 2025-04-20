@@ -5,8 +5,12 @@ import { UseGuards } from '@nestjs/common';
 
 @WebSocketGateway({
   cors: {
+<<<<<<< HEAD
     origin: ['http://localhost:3000', 'http://localhost:8081'],
     credentials: true,
+=======
+    origin: '*', // En producción, restringe esto a los dominios permitidos
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   },
   namespace: 'deliveries',
 })

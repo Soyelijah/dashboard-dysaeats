@@ -10,7 +10,10 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
+<<<<<<< HEAD
     "start:skip-checks": "TS_NODE_TRANSPILE_ONLY=true nest start --watch",
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -22,6 +25,7 @@
     "migration:create": "npm run typeorm migration:create",
     "migration:run": "npm run typeorm migration:run",
     "migration:revert": "npm run typeorm migration:revert",
+<<<<<<< HEAD
     "migration:run-ts": "ts-node -r tsconfig-paths/register src/database/run-migrations.ts",
     "seed": "ts-node -r tsconfig-paths/register src/database/seeds/init-seeds.ts",
     "db:setup": "npm run migration:run-ts && npm run seed"
@@ -33,13 +37,24 @@
     "@apollo/server": "^4.10.1",
     "@nestjs/apollo": "^12.0.11",
     "@nestjs/axios": "^4.0.0",
+=======
+    "seed": "ts-node -r tsconfig-paths/register src/database/seeds/index.ts"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.1",
+    "@nestjs/apollo": "^12.0.11",
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.2.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/event-emitter": "^3.0.1",
     "@nestjs/graphql": "^12.0.11",
     "@nestjs/jwt": "^10.2.0",
+<<<<<<< HEAD
     "@nestjs/microservices": "^10.4.15",
+=======
+    "@nestjs/microservices": "^11.0.13",
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     "@nestjs/passport": "^10.0.3",
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/platform-socket.io": "^10.0.0",
@@ -47,22 +62,30 @@
     "@nestjs/swagger": "^11.1.0",
     "@nestjs/throttler": "^5.2.0",
     "@nestjs/typeorm": "^10.0.2",
+<<<<<<< HEAD
     "@nestjs/websockets": "^10.4.15",
     "@redis/client": "^1.5.14",
     "adminjs": "^7.8.15",
     "bcrypt": "^5.1.1",
     "body-parser": "^2.2.0",
+=======
+    "@nestjs/websockets": "^10.0.0",
+    "bcrypt": "^5.1.1",
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     "cache-manager": "^5.4.0",
     "cache-manager-redis-store": "^3.0.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
+<<<<<<< HEAD
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "express-formidable": "^1.2.0",
     "express-rate-limit": "^7.5.0",
     "express-session": "^1.18.1",
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     "graphql": "^16.8.1",
     "graphql-ws": "^5.15.0",
     "helmet": "^7.1.0",
@@ -78,9 +101,14 @@
     "pino-pretty": "^13.0.0",
     "redis": "^4.6.13",
     "reflect-metadata": "^0.2.0",
+<<<<<<< HEAD
     "response-time": "^2.3.3",
     "rxjs": "^7.8.1",
     "socket.io": "^4.8.1",
+=======
+    "rxjs": "^7.8.1",
+    "socket.io": "^4.7.4",
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     "typeorm": "^0.3.20",
     "uuid": "^9.0.1",
     "web-push": "^3.6.7"
@@ -93,6 +121,7 @@
     "@types/compression": "^1.7.5",
     "@types/cookie-parser": "^1.4.6",
     "@types/express": "^4.17.17",
+<<<<<<< HEAD
     "@types/express-rate-limit": "^5.1.3",
     "@types/express-session": "^1.18.1",
     "@types/jest": "^29.5.2",
@@ -103,6 +132,12 @@
     "@types/passport-local": "^1.0.38",
     "@types/passport-strategy": "^0.2.38",
     "@types/response-time": "^2.3.8",
+=======
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@types/passport-jwt": "^4.0.1",
+    "@types/passport-local": "^1.0.38",
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     "@types/socket.io": "^3.0.2",
     "@types/supertest": "^6.0.0",
     "@types/uuid": "^9.0.8",
@@ -120,7 +155,11 @@
     "ts-loader": "^9.4.3",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
+<<<<<<< HEAD
     "typescript": "^4.9.5"
+=======
+    "typescript": "^5.1.3"
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   },
   "jest": {
     "moduleFileExtensions": [

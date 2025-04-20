@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
+<<<<<<< HEAD
 }
 
 export function formatCurrency(amount: number): string {
@@ -57,4 +58,6 @@ export function calculatePercentChange(current: number, previous: number): numbe
 
 export function pluralize(count: number, singular: string, plural: string): string {
   return count === 1 ? singular : plural;
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 }

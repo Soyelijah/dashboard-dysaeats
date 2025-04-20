@@ -27,6 +27,10 @@ import { UserRepository } from './repositories/user.repository';
   ],
   controllers: [AuthController],
   providers: [AuthService, JwtStrategy, LocalStrategy, UserRepository],
+<<<<<<< HEAD
   exports: [AuthService, JwtStrategy, PassportModule, UserRepository, TypeOrmModule],
+=======
+  exports: [AuthService, JwtStrategy, PassportModule, UserRepository],
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 })
 export class AuthModule {}

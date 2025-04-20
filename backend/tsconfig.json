@@ -6,8 +6,12 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+<<<<<<< HEAD
     "target": "ES2019",
     "lib": ["ES2019", "DOM"],
+=======
+    "target": "ES2021",
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
@@ -18,8 +22,11 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
+<<<<<<< HEAD
     "esModuleInterop": true,
     "types": ["jest", "node"],
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     "paths": {
       "@app/*": ["src/*"],
       "@config/*": ["src/config/*"],

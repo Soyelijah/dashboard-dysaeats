@@ -19,9 +19,12 @@ export class MenuCategory {
   @ManyToOne(() => Restaurant)
   @JoinColumn({ name: 'restaurant_id' })
   restaurant: Restaurant;
+<<<<<<< HEAD
   
   // Campo virtual para facilitar la asignación (no está mapeado a una columna)
   restaurantId: string;
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 
   @OneToMany(() => MenuItem, item => item.category)
   items: MenuItem[];

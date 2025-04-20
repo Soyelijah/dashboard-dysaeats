@@ -16,8 +16,12 @@ import { NotificationType } from '../../modules/notifications/enums/notification
 
 @WebSocketGateway({
   cors: {
+<<<<<<< HEAD
     origin: ['http://localhost:3000', 'http://localhost:8081'],
     credentials: true,
+=======
+    origin: '*',
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   },
   namespace: 'notifications',
 })

@@ -6,7 +6,11 @@ export const getSocket = (): Socket => {
   if (!socket) {
     const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
     
+<<<<<<< HEAD
     socket = io(process.env.NEXT_PUBLIC_WS_URL || 'http://localhost:3001', {
+=======
+    socket = io(process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000', {
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
       auth: {
         token,
       },

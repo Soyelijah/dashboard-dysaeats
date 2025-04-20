@@ -60,7 +60,10 @@ describe('AuthService', () => {
         email: 'john.doe@example.com',
         rut: '12345678-9',
         password: 'Password123!',
+<<<<<<< HEAD
         role: UserRole.CUSTOMER,
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
       };
 
       const mockUser = {
@@ -97,7 +100,10 @@ describe('AuthService', () => {
         email: 'existing@example.com',
         rut: '12345678-9',
         password: 'Password123!',
+<<<<<<< HEAD
         role: UserRole.CUSTOMER,
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
       };
 
       userRepository.findOneBy.mockResolvedValueOnce({
@@ -118,7 +124,10 @@ describe('AuthService', () => {
         email: 'john.doe@example.com',
         rut: 'existing-rut',
         password: 'Password123!',
+<<<<<<< HEAD
         role: UserRole.CUSTOMER,
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
       };
 
       userRepository.findOneBy.mockResolvedValueOnce(null);

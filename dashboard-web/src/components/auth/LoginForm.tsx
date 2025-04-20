@@ -1,12 +1,19 @@
 'use client';
 
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
+=======
+import { useState } from 'react';
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 import { useRouter } from 'next/navigation';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+<<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth';
 import Link from 'next/link';
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 
 interface LoginFormProps {
   dict: any;
@@ -15,6 +22,7 @@ interface LoginFormProps {
 
 export default function LoginForm({ dict, lang }: LoginFormProps) {
   const router = useRouter();
+<<<<<<< HEAD
   const { login, isAuthenticated, isLoading: authLoading } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -31,11 +39,19 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
     router.refresh();
   }, [router]);
 
+=======
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   // Create a schema for login validation
   const loginSchema = z.object({
     email: z.string().email(dict.auth.invalidFormat),
     password: z.string().min(1, dict.auth.requiredField),
+<<<<<<< HEAD
     rememberMe: z.boolean().optional(),
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   });
 
   type LoginFormValues = z.infer<typeof loginSchema>;
@@ -46,9 +62,12 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
     formState: { errors },
   } = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
+<<<<<<< HEAD
     defaultValues: {
       rememberMe: false,
     }
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   });
 
   async function onSubmit(data: LoginFormValues) {
@@ -56,10 +75,27 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
       setIsLoading(true);
       setError('');
 
+<<<<<<< HEAD
       // Use the login function from useAuth hook
       await login(data.email, data.password);
       
       // The redirection will be handled by the useEffect above
+=======
+      // Call your API here
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || dict.auth.loginError);
+      }
+
+      // Redirect to dashboard on success
+      router.push(`/${lang}/dashboard`);
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     } catch (err: any) {
       setError(err.message || dict.auth.loginError);
     } finally {
@@ -67,6 +103,7 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
     }
   }
 
+<<<<<<< HEAD
   // Show loading state when checking auth
   if (authLoading) {
     return (
@@ -94,6 +131,19 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
       <div className="space-y-4">
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+=======
+  return (
+    <form className="mt-8 space-y-6" onSubmit={handleSubmit(onSubmit)}>
+      {error && (
+        <div className="rounded-md bg-error/10 p-4">
+          <div className="text-sm text-error">{error}</div>
+        </div>
+      )}
+      
+      <div className="space-y-4 rounded-md shadow-sm">
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-text-primary">
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
             {dict.auth.email}
           </label>
           <input
@@ -101,8 +151,12 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
             type="email"
             autoComplete="email"
             {...register('email')}
+<<<<<<< HEAD
             className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 px-4 py-3 bg-white border"
             placeholder="example@email.com"
+=======
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
           />
           {errors.email && (
             <p className="mt-1 text-sm text-error">
@@ -112,7 +166,11 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
         </div>
         
         <div>
+<<<<<<< HEAD
           <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
+=======
+          <label htmlFor="password" className="block text-sm font-medium text-text-primary">
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
             {dict.auth.password}
           </label>
           <input
@@ -120,8 +178,12 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
             type="password"
             autoComplete="current-password"
             {...register('password')}
+<<<<<<< HEAD
             className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 px-4 py-3 bg-white border"
             placeholder="••••••••"
+=======
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
           />
           {errors.password && (
             <p className="mt-1 text-sm text-error">
@@ -134,6 +196,7 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <input
+<<<<<<< HEAD
             id="rememberMe"
             type="checkbox"
             {...register('rememberMe')}
@@ -141,16 +204,31 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
           />
           <label htmlFor="rememberMe" className="ml-2 block text-sm text-gray-700">
             {dict.auth.rememberMe}
+=======
+            id="remember_me"
+            name="remember_me"
+            type="checkbox"
+            className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+          />
+          <label htmlFor="remember_me" className="ml-2 block text-sm text-text-secondary">
+            Remember me
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
           </label>
         </div>
 
         <div className="text-sm">
+<<<<<<< HEAD
           <Link 
             href={`/${lang}/forgot-password`} 
             className="font-medium text-primary-600 hover:text-primary-500"
           >
             {dict.auth.forgotPassword}
           </Link>
+=======
+          <a href={`/${lang}/forgot-password`} className="font-medium text-primary hover:text-primary-600">
+            {dict.auth.forgotPassword}
+          </a>
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
         </div>
       </div>
 
@@ -158,6 +236,7 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
         <button
           type="submit"
           disabled={isLoading}
+<<<<<<< HEAD
           className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:bg-primary-300 disabled:cursor-not-allowed transition-colors"
         >
           {isLoading ? (
@@ -209,6 +288,13 @@ export default function LoginForm({ dict, lang }: LoginFormProps) {
           </button>
         </div>
       </div>
+=======
+          className="group relative flex w-full justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {isLoading ? dict.common.loading : dict.auth.login}
+        </button>
+      </div>
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
     </form>
   );
 }

@@ -2,7 +2,11 @@ import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateCol
 import { User } from '../../auth/entities/user.entity';
 import { NotificationType } from '../enums/notification-type.enum';
 
+<<<<<<< HEAD
 @Entity('app_notifications')
+=======
+@Entity('notifications')
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 export class Notification {
   @PrimaryGeneratedColumn('uuid')
   id: string;

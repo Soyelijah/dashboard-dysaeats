@@ -40,6 +40,7 @@ export class WsJwtGuard implements CanActivate {
     // En Socket.IO, el token se puede proporcionar en los handshake.auth o handshake.query
     const auth = client.handshake?.auth || {};
     const query = client.handshake?.query || {};
+<<<<<<< HEAD
     const headers = client.handshake?.headers || {};
     
     // Obtener token de diferentes fuentes posibles
@@ -54,5 +55,9 @@ export class WsJwtGuard implements CanActivate {
     }
     
     return token;
+=======
+    
+    return auth.token || query.token;
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   }
 }

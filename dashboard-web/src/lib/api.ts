@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+<<<<<<< HEAD
 // Este archivo se mantiene por compatibilidad con código anterior, pero
 // la aplicación está migrando a usar el cliente Supabase directamente
 
@@ -13,6 +14,15 @@ const api = axios.create({
     'Content-Type': 'application/json',
   },
   withCredentials: true, // Allow cookies in cross-origin requests
+=======
+// Configura la instancia base de axios
+const api = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  withCredentials: true, // Permite enviar cookies en solicitudes cross-origin
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 });
 
 // Interceptor para agregar el token de autenticación a cada solicitud

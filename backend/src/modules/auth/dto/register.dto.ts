@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import { IsString, IsEmail, IsNotEmpty, MinLength, IsOptional, Matches, IsEnum } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 import { i18nValidationMessage } from 'nestjs-i18n';
 import { IsRutValid } from '../../../shared/validators/rut.validator';
 import { UserRole } from '../enums/user-role.enum';
+=======
+import { IsString, IsEmail, IsNotEmpty, MinLength, IsOptional, Matches } from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
+import { i18nValidationMessage } from 'nestjs-i18n';
+import { IsRutValid } from '../../../shared/validators/rut.validator';
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 
 export class RegisterDto {
   @ApiProperty({
@@ -31,7 +38,11 @@ export class RegisterDto {
 
   @ApiProperty({
     description: 'RUT chileno del usuario (formato: 12345678-9)',
+<<<<<<< HEAD
     example: '25484075-0',
+=======
+    example: '12345678-9',
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   })
   @IsString({ message: i18nValidationMessage('validation.string') })
   @IsNotEmpty({ message: i18nValidationMessage('validation.required', { field: 'rut' }) })
@@ -58,6 +69,7 @@ export class RegisterDto {
   @IsString({ message: i18nValidationMessage('validation.string') })
   @IsOptional()
   restaurantName?: string;
+<<<<<<< HEAD
 
   @ApiProperty({
     description: 'Rol del usuario',
@@ -67,4 +79,6 @@ export class RegisterDto {
   @IsEnum(UserRole, { message: i18nValidationMessage('validation.enum', { enum: Object.values(UserRole).join(', ') }) })
   @IsNotEmpty({ message: i18nValidationMessage('validation.required', { field: 'role' }) })
   role: UserRole;
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 }

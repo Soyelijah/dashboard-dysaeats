@@ -54,11 +54,19 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ restaurantId })
     return (
       <Card className="col-span-full">
         <CardHeader>
+<<<<<<< HEAD
           <CardTitle>{dict.analytics?.performanceMetrics || 'Performance Metrics'}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="h-96 flex items-center justify-center">
             <p>Loading...</p>
+=======
+          <CardTitle>{dict.analytics.performanceMetrics}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="h-96 flex items-center justify-center">
+            <p>{dict.common.loading}</p>
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
           </div>
         </CardContent>
       </Card>

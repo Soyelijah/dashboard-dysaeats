@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies
 node_modules/
 .pnp/
@@ -61,3 +62,73 @@ android/app/build/
 android/.gradle/
 ios/build/
 ios/Pods/
+=======
+# Dependencias
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Archivos de compilación
+dist/
+build/
+out/
+.next/
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Archivos de log
+logs/
+*.log
+
+# Archivos de caché
+.cache/
+.npm/
+.eslintcache
+.stylelintcache
+
+# Archivos de IDE/editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Archivos de cobertura de pruebas
+coverage/
+.nyc_output/
+
+# Archivos temporales
+tmp/
+temp/
+
+# Otros
+.vercel
+.serverless/
+.fusebox/
+
+# Específicos de Android/iOS
+android/.gradle
+android/app/build/
+ios/Pods/
+ios/build/
+
+# Servicios externos
+firebase-debug.log
+firebase-debug.*.log
+
+# Secure Info
+**/SecureInfo/
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f

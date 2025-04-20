@@ -15,7 +15,11 @@ export const dataSourceOptions: DataSourceOptions = {
   database: process.env.DB_DATABASE || 'dysaeats',
   entities: [join(__dirname, '../**/*.entity{.ts,.js}')],
   migrations: [join(__dirname, 'migrations/*{.ts,.js}')],
+<<<<<<< HEAD
   synchronize: false, // Desactivado para evitar problemas con tablas existentes
+=======
+  synchronize: process.env.NODE_ENV === 'development', // Solo para desarrollo
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   logging: process.env.NODE_ENV === 'development',
   ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false,
 };

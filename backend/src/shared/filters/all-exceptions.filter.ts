@@ -7,7 +7,10 @@ import {
   Logger,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
+<<<<<<< HEAD
 import { I18nValidationException } from 'nestjs-i18n';
+=======
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 
 /**
  * Filtro para manejar todas las excepciones en la aplicación
@@ -27,6 +30,7 @@ export class AllExceptionsFilter implements ExceptionFilter {
     let details = null;
     let code = 'INTERNAL_SERVER_ERROR';
     
+<<<<<<< HEAD
     // Manejar excepciones de validación i18n
     if (exception instanceof I18nValidationException) {
       status = HttpStatus.BAD_REQUEST;
@@ -84,6 +88,10 @@ export class AllExceptionsFilter implements ExceptionFilter {
     }
     // Manejar excepciones HTTP
     else if (exception instanceof HttpException) {
+=======
+    // Manejar excepciones HTTP
+    if (exception instanceof HttpException) {
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
       status = exception.getStatus();
       const exceptionResponse = exception.getResponse();
       

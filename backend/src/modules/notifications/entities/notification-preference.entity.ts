@@ -1,7 +1,11 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, OneToOne, JoinColumn } from 'typeorm';
 import { User } from '../../auth/entities/user.entity';
 
+<<<<<<< HEAD
 @Entity('app_notification_preferences')
+=======
+@Entity('notification_preferences')
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
 export class NotificationPreference {
   @PrimaryGeneratedColumn('uuid')
   id: string;

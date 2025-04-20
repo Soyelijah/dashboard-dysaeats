@@ -1,19 +1,31 @@
 import { WebSocketGateway, SubscribeMessage, MessageBody, WebSocketServer, ConnectedSocket } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
 import { UseGuards } from '@nestjs/common';
+<<<<<<< HEAD
 import { WsJwtGuard } from '../../shared/guards/ws-jwt.guard';
 
 @WebSocketGateway({
   cors: {
     origin: ['http://localhost:3000', 'http://localhost:8081', 'http://localhost:19000'], // Frontends permitidos
     credentials: true,
+=======
+// import { WsJwtGuard } from '../../shared/guards/ws-jwt.guard';
+
+@WebSocketGateway({
+  cors: {
+    origin: '*', // En producción, restringe esto a los dominios permitidos
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   },
   namespace: 'orders',
 })
 export class OrdersGateway {
   @WebSocketServer() server: Server;
 
+<<<<<<< HEAD
   @UseGuards(WsJwtGuard)
+=======
+  // @UseGuards(WsJwtGuard)
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   @SubscribeMessage('joinOrderRoom')
   handleJoinOrderRoom(
     @ConnectedSocket() client: Socket,
@@ -23,7 +35,11 @@ export class OrdersGateway {
     console.log(`Client ${client.id} joined room: order_${orderId}`);
   }
 
+<<<<<<< HEAD
   @UseGuards(WsJwtGuard)
+=======
+  // @UseGuards(WsJwtGuard)
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   @SubscribeMessage('leaveOrderRoom')
   handleLeaveOrderRoom(
     @ConnectedSocket() client: Socket,
@@ -33,7 +49,11 @@ export class OrdersGateway {
     console.log(`Client ${client.id} left room: order_${orderId}`);
   }
 
+<<<<<<< HEAD
   @UseGuards(WsJwtGuard)
+=======
+  // @UseGuards(WsJwtGuard)
+>>>>>>> bffe05d7ca956643d183738ecc522ad112b3e36f
   @SubscribeMessage('joinRestaurantOrders')
   handleJoinRestaurantOrders(
     @ConnectedSocket() client: Socket,
